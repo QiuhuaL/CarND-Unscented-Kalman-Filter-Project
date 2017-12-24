@@ -74,8 +74,8 @@ UKF::UKF() {
   // initial covariance matrix
   P_ = MatrixXd(n_x_, n_x_);
 
-  P_ <<  1, 0, 0, 0, 0,
-          0, 1, 0, 0, 0,
+  P_ <<  2*std_laspx_*std_laspx_, 0, 0, 0, 0,
+          0, 2*std_laspy_*std_laspy_, 0, 0, 0,
           0, 0, 1, 0, 0,
           0, 0, 0, 1, 0,
           0, 0, 0, 0, 1;
